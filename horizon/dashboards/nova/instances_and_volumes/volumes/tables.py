@@ -106,9 +106,9 @@ class VolumesTableBase(tables.DataTable):
         ("creating", None),
         ("error", False),
     )
-    name = tables.Column("displayName", verbose_name=_("Name"),
+    name = tables.Column("display_name", verbose_name=_("Name"),
                          link="%s:volumes:detail" % URL_PREFIX)
-    description = tables.Column("displayDescription",
+    description = tables.Column("display_description",
                                 verbose_name=_("Description"))
     size = tables.Column(get_size, verbose_name=_("Size"))
     status = tables.Column("status",
@@ -118,11 +118,11 @@ class VolumesTableBase(tables.DataTable):
                            status_choices=STATUS_CHOICES)
 
     def get_object_display(self, obj):
-        return obj.displayName
+        return obj.display_name
 
 
 class VolumesTable(VolumesTableBase):
-    name = tables.Column("displayName",
+    name = tables.Column("display_name",
                          verbose_name=_("Name"),
                          link="%s:volumes:detail" % URL_PREFIX)
     attachments = tables.Column(get_attachment,

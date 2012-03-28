@@ -1,15 +1,15 @@
 {% load i18n sizeformat parse_date %}
 
-<h3>{% trans "Volume Overview" %}: {{volume.displayName }}</h3>
+<h3>{% trans "Volume Overview" %}: {{volume.display_name }}</h3>
 
 <div class="info row-fluid">
   <h4>{% trans "Info" %}</h4>
   <hr class="header_rule">
   <ul>
-    <li><strong>{% trans "Name" %}:</strong>&nbsp;{{ volume.displayName }}</li>
+    <li><strong>{% trans "Name" %}:</strong>&nbsp;{{ volume.display_name }}</li>
     <li><strong>{% trans "ID" %}:</strong>&nbsp;{{ volume.id }}</li>
-    {% if volume.displayDescription %}
-    <li><strong>{% trans "Description" %}:</strong>&nbsp;{{ volume.displayDescription }}</li>
+    {% if volume.display_description %}
+    <li><strong>{% trans "Description" %}:</strong>&nbsp;{{ volume.display_description }}</li>
     {% endif %}
   </ul>
 </div>
